@@ -55,10 +55,39 @@ nav a:hover {
     color: green;
     font-weight: bold;
   }
-  .abr{
+  .grid-container {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns:1;
+    gap: 10px;
+    padding-bottom: 20px;
+    background-color: #333;
+    justify-content: center;
+}
+.grid-item {
+  width: 600px;
+  height: 150px;
+  background-color:#333;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  animation: rgb-border 2s linear infinite;
+  padding: 10px;
+}
+@keyframes rgb-border {
+  0% {
+      border-color: red;
   }
+  33% {
+      border-color: green;
+  }
+  66% {
+      border-color: blue;
+  }
+  100% {
+      border-color: red;
+  }
+}
 p{
   list-style-position: outside;
   font-style: oblique;
